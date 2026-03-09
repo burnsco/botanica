@@ -1,5 +1,10 @@
 ---
-const navLinks = ['Shop', 'Care Guide', 'Journal', 'About'];
+const navLinks = [
+  { name: 'Shop', href: '#shop' },
+  { name: 'Care Guide', href: '#care-guide' },
+  { name: 'Journal', href: '#journal' },
+  { name: 'About', href: '#about' }
+];
 ---
 <header class="sticky top-0 z-50 border-b-4 border-primary bg-bg px-6 py-4 md:px-12">
   <nav class="flex items-center justify-between" aria-label="Main">
@@ -9,7 +14,7 @@ const navLinks = ['Shop', 'Care Guide', 'Journal', 'About'];
       </button>
       <ul class="hidden items-center gap-6 md:flex" role="list">
         {navLinks.map((item) => (
-          <li><a href="#shop" class="text-sm font-bold uppercase tracking-widest transition-opacity hover:opacity-70">{item}</a></li>
+          <li><a href={item.href} class="text-sm font-bold uppercase tracking-widest transition-opacity hover:opacity-70">{item.name}</a></li>
         ))}
       </ul>
     </div>
