@@ -1,8 +1,7 @@
 {
   "name": "botanica",
-  "type": "module",
   "version": "0.0.1",
-  "packageManager": "bun@1.2.0",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,18 +9,20 @@
     "preview": "astro preview",
     "lint": "oxlint",
     "format": "oxfmt",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint:fix": "oxlint --fix . && oxfmt",
+    "check": "astro check"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
-    "astro": "^6.0.1"
+    "astro": "^6.0.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.3.3",
     "oxfmt": "^0.37.0",
-    "oxlint": "^1.52.0",
+    "oxlint": "^1.53.0",
     "tailwindcss": "^4.2.1"
   },
   "lint-staged": {
@@ -29,5 +30,6 @@
       "oxlint --fix",
       "oxfmt"
     ]
-  }
+  },
+  "packageManager": "bun@1.2.0"
 }
