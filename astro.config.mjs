@@ -18,5 +18,6 @@ export default defineConfig({
     ],
   },
 
-  adapter: cloudflare(),
+  // Avoid default `cloudflare-binding` (needs paid Cloudflare Images); compile bakes assets into `/_astro/`.
+  adapter: cloudflare({ imageService: "compile" }),
 });
